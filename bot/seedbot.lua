@@ -6,7 +6,7 @@ require("./bot/utils")
 
 local f = assert(io.popen('/usr/bin/git describe --tags', 'r'))
 VERSION = assert(f:read('*a'))
-f:close()
+f:close(
 
 -- This function is called when tg receive a msg
 function on_msg_receive (msg)
